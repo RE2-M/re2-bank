@@ -28,6 +28,14 @@ Citizen.CreateThread(function()
     end
 end)
 
+Citizen.CreateThread(function()
+    for k,v in pairs(Config.BankDoors) do
+        --for v, door in pairs(k) do
+        Citizen.InvokeNative(0xD99229FE93B46286,v,1,1,0,0,0,0)
+        Citizen.InvokeNative(0x6BAB9442830C7F53,v,0)
+    end
+end)
+
 
 
 
